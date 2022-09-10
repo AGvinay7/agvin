@@ -29,6 +29,10 @@ padding: 20px;
 
 }
 
+.education-title{
+  text-shadow: 1px 1px 1px rgb(36, 36, 37),1px 1px 1px rgb(85, 85, 145);;
+}
+
     .insta-icon {
         position: relative;
         width: 36px;

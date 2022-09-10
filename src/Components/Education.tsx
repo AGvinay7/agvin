@@ -1,6 +1,7 @@
+import { Divider, Grid } from '@mui/material';
 import * as React from 'react';
-import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
+import rvce from './CertificatesIcons/rvce.png';
+import bnguni from './CertificatesIcons/bnguni.png';
 
 interface IState {
 
@@ -13,25 +14,33 @@ export default class Education extends React.PureComponent<IState, Iprops>{
     }
     render() {
         return (<div>
-            <h5>PRIMARY</h5>         
-            <Chip sx={{margin:'0.4em'}} label="Azure portal" />
-                <Chip sx={{margin:'0.4em'}} label="Azure devops" />
-            <h3>SECONDARY</h3>
-            
-                <Chip sx={{margin:'0.4em'}} label="Docker basics" />
-                <Chip sx={{margin:'0.4em'}} label="Kubernetes basics" />
-                <Chip sx={{margin:'0.4em'}} label="Azure DevOps Services" />
-                          
-            
-            <h3>TOOLS</h3>
-            
-                <Chip sx={{margin:'0.4em'}} label="Azure portal" />
-                <Chip sx={{margin:'0.4em'}} label="Azure devops" />
-                <Chip sx={{margin:'0.4em'}} label="VS code" />
-                <Chip sx={{margin:'0.4em'}} label="Visual studio 2022" />
-           
-           
-        </div>
+            <Grid container spacing={2}>
+                <Grid item xs={6}>
+                    <div>
+                        <h3 className='education-title'>Master of  Computer Applications (Masters)</h3>
+                        <h5>R.V. College Of Engineering (RVCE), Bengaluru, Karnataka 560059, India</h5>
+                        <p style={{ fontSize: '0.8em' }}>August 2015 - December 2017</p>
+                        <p style={{ fontSize: '0.8em' }}>https://www.rvce.edu.in/</p>
+                    </div>
+                </Grid>
+                <Grid item xs={6}>
+                    <img height='150em' width='150em'  src={rvce} alt="rvce"/>                    
+                </Grid>
+                <Divider textAlign="center" />
+                <Grid item xs={6}>
+                    <div>
+                        <h3 className='education-title'>Bachelor of Science (BSc. EMCS)</h3>
+                        <h5>Bangalore University, Bengaluru, Karnataka 560056, India</h5>
+                        <p style={{ fontSize: '0.8em' }}>August 2015 - December 2017</p>
+                        <p style={{ fontSize: '0.8em' }}>https://bangaloreuniversity.ac.in</p>
+                    </div>
+                </Grid>
+                <Grid item xs={6}>
+                <img height='150em' width='150em' src={bnguni} alt="bng"/>   
+                </Grid>
+            </Grid>
+            <Divider textAlign="center" />
+        </div >
         );
     }
 }

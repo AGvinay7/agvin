@@ -56,12 +56,16 @@ export default function BasicTabs() {
     return (
         <Box >
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                <Tabs
+                    variant="scrollable"
+                    allowScrollButtonsMobile
+                    value={value}
+                    onChange={handleChange}
+                    aria-label="basic tabs example">
                     <Tab label="PERSONAL INFO" {...a11yProps(0)} />
                     <Tab label="SKILLS" {...a11yProps(1)} />
                     <Tab label="CERTIFICATIONS" {...a11yProps(2)} />
                     <Tab label="EDUCATION" {...a11yProps(3)} />
-                    <Tab label="PROJECTS" {...a11yProps(4)} />
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
@@ -77,39 +81,15 @@ export default function BasicTabs() {
                         improve working efficiency, and object-oriented programming. A team player
                         who thrives on working in fast-paced environments.</div>
                 </Stack>
-                <WhatsAppIcon
-                    sx={{ margin: '0.5em', color: 'green' }}
-                    fontSize='large'
-                    onClick={() => window.open('//api.whatsapp.com/send?phone=919538805660&text=Hi Vinay!')} />
-                <MdPhone
-                    sx={{ margin: '0.5em' }}
-                    fontSize='large'
-                    onClick={() => window.open('tel:+919538805660')} />
-                <LinkedInIcon
-                    sx={{ margin: '0.5em', color: 'blue' }}
-                    fontSize='large'
-                    onClick={() => window.open('https://www.linkedin.com/in/vinay-ag/')}></LinkedInIcon>
-                <GitHubIcon
-                    sx={{ margin: '0.5em' }}
-                    fontSize='large'
-                    onClick={() => window.open('https://www.github.com/AGvinay7')}></GitHubIcon>
-                <InstagramIcon
-                    sx={{ margin: '0.5em', }}
-                    className='insta-icon'
-                    fontSize='large'
-                    onClick={() => window.open('https://www.instagram.com/agvinn/')}></InstagramIcon>
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <Skills />
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Certifications/>
+                <Certifications />
             </TabPanel>
             <TabPanel value={value} index={3}>
-            <Education />
-            </TabPanel>
-            <TabPanel value={value} index={4}>
-                In Progress
+                <Education />
             </TabPanel>
         </Box>
     );
