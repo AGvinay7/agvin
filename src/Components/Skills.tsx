@@ -13,7 +13,7 @@ export default class Skills extends React.PureComponent<IState, Iprops>{
     }
     render() {
         return (<div>
-            <h5>PRIMARY</h5>         
+            <h3>PRIMARY</h3>         
             <div>
                 <Chip sx={{margin:'0.4em'}} label="Azure Cloud" />
                 <Chip sx={{margin:'0.4em'}} label="C#" />
@@ -24,17 +24,17 @@ export default class Skills extends React.PureComponent<IState, Iprops>{
                 <Chip sx={{margin:'0.4em'}} label="Object-Oriented Programming" />
                 <Chip sx={{margin:'0.4em'}} label="Design patterns" />
                 <Chip sx={{margin:'0.4em'}} label="SOLID" />
-                <Chip sx={{margin:'0.4em'}} label="OAuth2" />
+                <Chip sx={{margin:'0.4em'}} label="OAuth 2.0" />
                 <Chip sx={{margin:'0.4em'}} label="Web API" />
                 <Chip sx={{margin:'0.4em'}} label="Javascript ES6 / Typescript" />
-                <Chip sx={{margin:'0.4em'}} label="Linq / Entity Framework" />
+                <Chip sx={{margin:'0.4em'}} label="Entity Framework" />
                 <Chip sx={{margin:'0.4em'}} label="Azure Active Directory" />
                 <Chip sx={{margin:'0.4em'}} label="React Router & React Redux" />
                 <Chip sx={{margin:'0.4em'}} label="Web Development" />
                 <Chip sx={{margin:'0.4em'}} label="HTML5/CSS" />
                 <Chip sx={{margin:'0.4em'}} label="TDD" />
                 <Chip sx={{margin:'0.4em'}} label="Azure SQL Database" />
-                <Chip sx={{margin:'0.4em'}} label="Neo4j grapgh database" />              
+                <Chip sx={{margin:'0.4em'}} label="Neo4j graph database" />              
                 </div>
             <h3>SECONDARY</h3>
             

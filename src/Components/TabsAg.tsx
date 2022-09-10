@@ -71,9 +71,9 @@ export default function BasicTabs() {
             <TabPanel value={value} index={0}>
                 <Stack spacing={1}>
                     <div><b>Nationality</b>: Indian</div>
-                    <div><b>Date of birth</b>: 19/09/1993</div>
+                    <div><b>Date of birth</b>: 19th September 1993</div>
                     <div><b>Gender</b>: Male</div>
-                    <div><b>location </b>: Bangalore, Karnataka, India.</div>
+                    <div><b>location </b>: Bengaluru, Karnataka, India.</div>
                     <div><b>About me</b>:
                         An accomplished Full Stack Developer with master's in computer applications
                         and 5 years of industry experience. Experience includes programming
