@@ -6,10 +6,27 @@
     display: inline-flex;  
   flex-direction: row;
 }
+
 .title-ag{  
     margin-top: 0px;
     margin-bottom: 0.25em; 
     text-shadow: 1px 1px 1px rgb(36, 36, 37),4px 4px 6px rgb(85, 85, 145);;
+}
+.grid-container {
+  display: grid;
+}
+
+.grid-container--fill {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.grid-container--fit {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-element {
+padding: 20px;
+
 }
 
     .insta-icon {
@@ -38,3 +55,4 @@
         height: 11px;
         border-radius: 50%
       }
+      

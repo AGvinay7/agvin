@@ -9,6 +9,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MdPhone from '@mui/icons-material/Phone';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Skills from './Skills';
+import Education from './Education';
+import Certifications from './Certifications';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -97,13 +100,13 @@ export default function BasicTabs() {
                     onClick={() => window.open('https://www.instagram.com/agvinn/')}></InstagramIcon>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                In Progress
+                <Skills />
             </TabPanel>
             <TabPanel value={value} index={2}>
-                In Progress
+                <Certifications/>
             </TabPanel>
             <TabPanel value={value} index={3}>
-                In Progress
+            <Education />
             </TabPanel>
             <TabPanel value={value} index={4}>
                 In Progress
