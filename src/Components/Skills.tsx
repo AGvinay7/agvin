@@ -15,10 +15,12 @@ export default class Skills extends React.PureComponent<IState, Iprops>{
         return (<div>
             <h3>PRIMARY</h3>         
             <div>
+                 <Chip sx={{margin:'0.4em'}} label="ReactJs" />
+                 <Chip sx={{margin:'0.4em'}} label="TypeScript" />
+                 <Chip sx={{margin:'0.4em'}} label="Redux" />                 
                 <Chip sx={{margin:'0.4em'}} label="Azure Cloud" />
                 <Chip sx={{margin:'0.4em'}} label="C#" />
-                <Chip sx={{margin:'0.4em'}} label=".NET core" />
-                <Chip sx={{margin:'0.4em'}} label="TypeScript" />
+                <Chip sx={{margin:'0.4em'}} label=".NET core" />              
                 <Chip sx={{margin:'0.4em'}} label="JavaScript" />
                 <Chip sx={{margin:'0.4em'}} label="Micro services" />
                 <Chip sx={{margin:'0.4em'}} label="Object-Oriented Programming" />
@@ -32,16 +34,16 @@ export default class Skills extends React.PureComponent<IState, Iprops>{
                 <Chip sx={{margin:'0.4em'}} label="React Router & React Redux" />
                 <Chip sx={{margin:'0.4em'}} label="Web Development" />
                 <Chip sx={{margin:'0.4em'}} label="HTML5/CSS" />
-                <Chip sx={{margin:'0.4em'}} label="TDD" />
+                <Chip sx={{margin:'0.4em'}} label="Test Driven Development" />
                 <Chip sx={{margin:'0.4em'}} label="Azure SQL Database" />
                 <Chip sx={{margin:'0.4em'}} label="Neo4j graph database" />              
                 </div>
             <h3>SECONDARY</h3>
             
-                <Chip sx={{margin:'0.4em'}} label="Docker basics" />
-                <Chip sx={{margin:'0.4em'}} label="Kubernetes basics" />
+                <Chip sx={{margin:'0.4em'}} label="Docker" />
+                <Chip sx={{margin:'0.4em'}} label="Kubernetes" />
                 <Chip sx={{margin:'0.4em'}} label="Azure DevOps Services" />
-                <Chip sx={{margin:'0.4em'}} label="CI-CD basics" />
+                <Chip sx={{margin:'0.4em'}} label="CI-CD" />
                 <Chip sx={{margin:'0.4em'}} label="Containerization" />
                 <Chip sx={{margin:'0.4em'}} label="Chatbot programming" />
                 <Chip sx={{margin:'0.4em'}} label="SQL & NOSQL" />
@@ -68,8 +70,7 @@ export default class Skills extends React.PureComponent<IState, Iprops>{
                 <Chip sx={{margin:'0.4em'}} label="Adobe XD" />
                 <Chip sx={{margin:'0.4em'}} label="Source Tree" />
                 <Chip sx={{margin:'0.4em'}} label="Docker Desktop" />
-                <Chip sx={{margin:'0.4em'}} label="Neo4j Desktop" />
-                <Chip sx={{margin:'0.4em'}} label="Figma" />
+                <Chip sx={{margin:'0.4em'}} label="Neo4j Desktop" />              
            
         </div>
         );
