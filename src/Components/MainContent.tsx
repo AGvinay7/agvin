@@ -8,8 +8,11 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MdPhone from '@mui/icons-material/Phone';
 import GitHubIcon from '@mui/icons-material/GitHub';
-// import InstagramIcon from '@mui/icons-material/Instagram';
-import { Box, Modal, Tooltip, Typography } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Modal, Slide, Tooltip, Typography } from '@mui/material';
+import { TransitionProps } from '@mui/material/transitions';
+
 interface IState {
     timeOutVal:boolean;
 }
@@ -18,50 +21,135 @@ export default class MainContent extends React.PureComponent<Iprops,IState>{
     constructor(props: any) {
         super(props);
         this.state = {
-            timeOutVal : false
+            timeOutVal : true
         }
     }
-    componentDidMount(): void {
-        setTimeout(() => {
-            this.setState({timeOutVal:true});
-        }, 4000);
-    }
+    // componentDidMount(): void {
+    //     setTimeout(() => {
+    //         this.setState({timeOutVal:true});
+    //     }, 4000);
+    // }
     setTimeOutFun=()=>{
         this.setState({timeOutVal:true});
     }
+    Transition = React.forwardRef(function Transition(
+        props: TransitionProps & {
+          children: React.ReactElement<any, any>;
+        },
+        ref: React.Ref<unknown>,
+      ) {
+        return <Slide direction="up" ref={ref} {...props} />;
+      });
+      
     render() {
         const {timeOutVal} = this.state;
-        const style = {
-            position: 'absolute' as 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 300,
-            bgcolor: 'background.paper',
-            border: '2px solid #35115c',
-            boxShadow: 44,
-            p: 4,
-          };
         if(!timeOutVal)
         {
-            return <div><Modal
-            open={!timeOutVal}
-            onClose={()=>this.setTimeOutFun()}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
-            <Box sx={style}>
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                What's going on around me?
-              </Typography>
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                Currently I'm learning and creating PoCs on GenAI, LLMs and GPT models using python, one more recent PoC i developed is for visualising Neo4J graph nodes in web app using neovis library of React.
-              </Typography>
-            </Box>
-          </Modal></div>
+            return <div>
+                <Dialog
+        open={!timeOutVal}
+        TransitionComponent={this.Transition}
+        keepMounted
+        onClose={()=>this.setTimeOutFun()}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle>{"Additional information"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-slide-description">
+          <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Off project works?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+         <ul>
+            <li>
+            Currently I'm learning and creating PoCs on GenAI, LLMs and GPT models using python, one more recent PoC
+           I developed is for visualising Neo4J knowledge graph nodes in web app using neovis react library.
+            </li>
+            <li>
+            Found some efficient unit testing ideas using react-testing-library and jest.
+            </li>
+         </ul>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography>Awards and recognitions</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+          <ul>
+             <li>
+                Promoted to Senior (Associate tech lead) by EY
+            </li>
+            <li>
+                Exceptional client service award by EY Nexus leadership
+            </li>
+            <li>
+                SPOT award by EY GDS
+            </li>
+            <li>
+                Star of the PI award
+            </li>
+         </ul>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography>What are my hobbies?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+          <ul>
+            <li>
+                Sketching / Drawing
+            </li>
+            <li>
+                Coding
+            </li>
+            <li>
+                Sports and fitness
+            </li>
+            <li>
+                Travelling and photography
+            </li>
+         </ul>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={()=>this.setTimeOutFun()}>Close</Button>
+        </DialogActions>
+      </Dialog>
+          </div>
         }
         return (<div>
             <div className='main-area'>
+            <MenuIcon
+             sx={{float:'left'}} 
+            fontSize='large'
+            onClick={()=>this.setState({timeOutVal:false})}
+            ></MenuIcon>
                 <div className='avatar-title'>
                     <Avatar style={{ marginTop: '0.75em', marginRight: '0.65em' }} alt="VInay AG" src={vinayag} />
                     <h1 style={{ fontSize: '3em' }} className='title-ag'>Vinay AG</h1>
