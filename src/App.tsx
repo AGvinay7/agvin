@@ -18,7 +18,7 @@ function MyApp() {
     className='margins'
       sx={{
         width: '100vw',
-        height: '100vh',
+        height: 'auto',
         bgcolor: 'background.default',
         color: 'text.primary',
       }}

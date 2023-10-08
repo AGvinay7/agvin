@@ -29,7 +29,7 @@ export default class Skills extends React.PureComponent<IState, Iprops>{
                 <Chip sx={{margin:'0.4em'}} label="OAuth 2.0" />
                 <Chip sx={{margin:'0.4em'}} label="Web API" />
                 <Chip sx={{margin:'0.4em'}} label="Javascript ES6 / Typescript" />
-                <Chip sx={{margin:'0.4em'}} label="Entity Framework" />
+                {/* <Chip sx={{margin:'0.4em'}} label="Entity Framework" /> */}
                 <Chip sx={{margin:'0.4em'}} label="Azure Active Directory" />
                 <Chip sx={{margin:'0.4em'}} label="React Router & React Redux" />
                 <Chip sx={{margin:'0.4em'}} label="Web Development" />
