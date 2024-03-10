@@ -14,6 +14,7 @@ function MyApp() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
   return (
+    <div className='container'>
     <Container
     className='margins'
       sx={{
@@ -30,6 +31,7 @@ function MyApp() {
       </div>
       <MainContent/>
     </Container>
+    </div>
   );
 }
 

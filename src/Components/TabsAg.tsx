@@ -76,7 +76,7 @@ export default function BasicTabs() {
                     <div><b>location </b>: Bengaluru, Karnataka, India.</div>
                     <div><b>About me</b>:
                         An accomplished Full Stack Developer with master's in computer applications
-                        and 6 years of industry experience. Experience includes programming
+                        and 6.5 years of industry experience. Experience includes programming
                         application and presentation layers, building scalable internal tools that
                         improve working efficiency, and object-oriented programming. A team player
                         who thrives on working in fast-paced environments.</div>

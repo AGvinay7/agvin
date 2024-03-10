@@ -24,11 +24,7 @@ export default class MainContent extends React.PureComponent<Iprops,IState>{
             timeOutVal : true
         }
     }
-    // componentDidMount(): void {
-    //     setTimeout(() => {
-    //         this.setState({timeOutVal:true});
-    //     }, 4000);
-    // }
+
     setTimeOutFun=()=>{
         this.setState({timeOutVal:true});
     }

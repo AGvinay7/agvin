@@ -18,7 +18,7 @@ export default class Skills extends React.PureComponent<IState, Iprops>{
                  <Chip sx={{margin:'0.4em'}} label="ReactJs" />
                  <Chip sx={{margin:'0.4em'}} label="TypeScript" />
                  <Chip sx={{margin:'0.4em'}} label="Redux" />                 
-                <Chip sx={{margin:'0.4em'}} label="Azure Cloud" />
+                <Chip sx={{margin:'0.4em'}} label="Azure Cloud services" />
                 <Chip sx={{margin:'0.4em'}} label="C#" />
                 <Chip sx={{margin:'0.4em'}} label=".NET core" />              
                 <Chip sx={{margin:'0.4em'}} label="JavaScript" />
@@ -26,10 +26,11 @@ export default class Skills extends React.PureComponent<IState, Iprops>{
                 <Chip sx={{margin:'0.4em'}} label="Object-Oriented Programming" />
                 <Chip sx={{margin:'0.4em'}} label="Design patterns" />
                 <Chip sx={{margin:'0.4em'}} label="SOLID" />
-                <Chip sx={{margin:'0.4em'}} label="OAuth 2.0" />
+                {/* <Chip sx={{margin:'0.4em'}} label="OAuth 2.0" /> */}
                 <Chip sx={{margin:'0.4em'}} label="Web API" />
                 <Chip sx={{margin:'0.4em'}} label="Javascript ES6 / Typescript" />
-                {/* <Chip sx={{margin:'0.4em'}} label="Entity Framework" /> */}
+                <Chip sx={{margin:'0.4em'}} label="React testing library" />
+                <Chip sx={{margin:'0.4em'}} label="Jest" />
                 <Chip sx={{margin:'0.4em'}} label="Azure Active Directory" />
                 <Chip sx={{margin:'0.4em'}} label="React Router & React Redux" />
                 <Chip sx={{margin:'0.4em'}} label="Web Development" />
@@ -42,7 +43,7 @@ export default class Skills extends React.PureComponent<IState, Iprops>{
             
                 <Chip sx={{margin:'0.4em'}} label="Docker" />
                 <Chip sx={{margin:'0.4em'}} label="Kubernetes" />
-                <Chip sx={{margin:'0.4em'}} label="Azure DevOps Services" />
+                <Chip sx={{margin:'0.4em'}} label="Azure DevOps" />
                 <Chip sx={{margin:'0.4em'}} label="CI-CD" />
                 <Chip sx={{margin:'0.4em'}} label="Containerization" />
                 <Chip sx={{margin:'0.4em'}} label="Chatbot programming" />
